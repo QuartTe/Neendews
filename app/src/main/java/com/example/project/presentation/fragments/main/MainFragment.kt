@@ -37,15 +37,17 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
 
         categoryViewModel.newsLiveData.observe(viewLifecycleOwner){news->
+            Log.d("News", news.toString())
             if(news!=null) {
                 val directions =
                     MainFragmentDirections.actionMainFragmentToNewsReportsFragment(news)
                 findNavController().navigate(directions)
+                Log.d("Travel", "To the next fragment")
                 categoryViewModel.newsLiveData.postValue(null)
             }
         }
 
-        Log.d("HERE", "Try to setupRcView")
+        //Log.d("HERE", "Try to setupRcView")
 
         setupRcView()
     }
@@ -63,7 +65,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         categoryView.adapter = adapter
 
-        Log.d("HERE", Categories.getCategories()[0])
+        //Log.d("HERE", Categories.getCategories()[0])
 
         adapter.setList(Categories.getCategories())
     }

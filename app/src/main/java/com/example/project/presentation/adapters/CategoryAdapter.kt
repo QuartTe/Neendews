@@ -18,7 +18,7 @@ class CategoryAdapter(val getCategoryName: (String) -> Unit): RecyclerView.Adapt
 
         fun bind(category: String){
             binding.categoryName.text = category
-            Log.d("HERE", category)
+            //Log.d("HERE", category)
 
             binding.root.setOnClickListener{
                 getCategoryName(categoryList[adapterPosition])
@@ -28,7 +28,7 @@ class CategoryAdapter(val getCategoryName: (String) -> Unit): RecyclerView.Adapt
     }
 
     fun setList(categories: List<String>){
-        Log.d("HERE", categories[3])
+        //Log.d("HERE", categories[3])
         categoryList.clear()
         categoryList.addAll(categories)
         notifyDataSetChanged()
@@ -42,13 +42,13 @@ class CategoryAdapter(val getCategoryName: (String) -> Unit): RecyclerView.Adapt
     }
 
     override fun getItemCount(): Int {
-        Log.d("HERE", "getItemCount: ")
+        //Log.d("HERE", "getItemCount: ")
         return categoryList.size
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.bind(categoryList[position])
-        Log.d("HERE", holder.toString())
+        //Log.d("HERE", holder.toString())
     }
 
 }

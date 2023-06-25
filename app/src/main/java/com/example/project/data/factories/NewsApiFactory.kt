@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object NewsApiFactory {
 
-    private val BASE_URL = "https://inshorts.deta.dev/"
+    private val BASE_URL = "https://newsapi.org/v2/"
 
     val newsApi = createRetrofit().create(NewsApi::class.java)
 

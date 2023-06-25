@@ -1,5 +1,6 @@
 package com.example.project.presentation.fragments.main
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,10 +17,12 @@ class MainViewModel: ViewModel() {
     fun getNews(category: String){
 
         viewModelScope.launch {
-            try {
+            try{
                 val news = NewsUseCase.getNews(category)
+                Log.d("News2", news.toString())
                 newsLiveData.postValue(news)
             }catch(exception:Exception){
+                Log.d("News2", "Exception")
                 newsLiveData.postValue(null)
             }
         }

@@ -2,14 +2,12 @@ package com.example.project.data.local
 
 object Categories {
     private val categories = listOf("technology",
-        "world",
+        "general",
+        "health",
         "sports",
-        "automobile",
         "business",
         "science",
-        "politics",
-        "startup",
-        "hatke",)
+        "entertainment",)
 
     fun getCategories(): List<String>{
         return categories

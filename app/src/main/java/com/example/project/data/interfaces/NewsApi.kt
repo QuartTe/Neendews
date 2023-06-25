@@ -5,6 +5,10 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface NewsApi {
-    @GET("news")
-    suspend fun getNews(@Query("category")category:String):NewsResponse
+    @GET("top-headlines")
+    suspend fun getNews(
+        @Query("country")country:String = "us",
+        @Query("category")category:String,
+        @Query("apiKey")apiKey:String = "549bc36d2ee94a31b99b79d534853202",
+    ):NewsResponse
 }

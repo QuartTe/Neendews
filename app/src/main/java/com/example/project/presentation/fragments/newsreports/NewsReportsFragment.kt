@@ -37,7 +37,7 @@ class NewsReportsFragment : Fragment(R.layout.fragment_news_reports) {
         val categoryNameText = activity?.findViewById<TextView>(R.id.textCategory)
         categoryNameText?.text = news?.category
 
-        setupRcView(news!!.data)
+        setupRcView(news!!.articles)
     }
 
 

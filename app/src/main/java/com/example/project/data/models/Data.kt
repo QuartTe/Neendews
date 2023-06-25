@@ -7,11 +7,11 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Data(
-    val author: String,
-    val content: String,
-    val date: String,
-    val imageUrl: String,
-    val readMoreUrl: String?,
-    val time: String,
-    val title: String
+    val author: String?,
+    val title: String?,
+    val description: String?,
+    val urlToImage: String?,
+    val publishedAt: String?,
+    val content: String?,
+    val url: String?,
 ): Parcelable

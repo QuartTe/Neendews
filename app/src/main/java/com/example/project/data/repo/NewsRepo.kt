@@ -7,7 +7,7 @@ object NewsRepo {
     suspend fun getNews(category:String): NewsResponse{
 
         val api = NewsApiFactory.newsApi
-        val news = api.getNews(category)
+        val news = api.getNews(category = category)
         return news
     }
 }

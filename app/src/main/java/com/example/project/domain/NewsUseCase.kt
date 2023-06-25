@@ -6,6 +6,8 @@ import com.example.project.data.repo.NewsRepo
 object NewsUseCase {
 
     suspend fun getNews(category: String):NewsResponse{
-        return NewsRepo.getNews(category)
+        val news = NewsRepo.getNews(category)
+        news.category = category
+        return news
     }
 }

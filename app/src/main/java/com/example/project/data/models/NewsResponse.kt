@@ -7,7 +7,8 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class NewsResponse(
-    val category: String,
-    val `data`: List<Data>,
-    val success: Boolean
+    val status: String,
+    val totalResults: Int,
+    val `articles`: List<Data>,
+    var category: String = "",
 ):Parcelable
